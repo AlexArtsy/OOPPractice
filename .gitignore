@@ -1,0 +1,67 @@
+## Игнорируем пользовательские настройки IDE
+.vs/
+*.user
+*.suo
+*.userprefs
+*.vsp
+*.vspscc
+*.sln.iml
+
+## Игнорируем билд-артефакты
+bin/
+obj/
+[Bb]uild/
+[Dd]ebug/
+[Rr]elease/
+*.pdb
+*.cache
+*.ilk
+*.exp
+*.lib
+*.dll
+*.exe
+*.app
+*.out
+
+## Игнорируем зависимости (NuGet)
+packages/
+[Nn]u[Gg]et/
+*.nupkg
+*.nuget.props
+*.nuget.targets
+
+## Игнорируем кэш Rider/ReSharper
+_ReSharper.*
+*.resharper
+*.sln.dotnet
+.idea/
+
+## Игнорируем временные файлы
+*.tmp
+*.temp
+*.log
+*.tlog
+*.lastbuildstate
+
+## Игнорируем тестовые результаты
+[Tt]est[Rr]esult*/
+[Bb]uild[Ll]og.*
+*.trx
+
+## Игнорируем специфичные для .NET файлы
+.project.lock.json
+*.DotSettings
+appsettings.Development.json
+launchSettings.json
+
+## Игнорируем локальные настройки Azure Functions
+local.settings.json
+
+## Игнорируем файлы Docker (если не используются)
+.dockerignore
+**/.docker/**
+**/Dockerfile*
+
+## Игнорируем файлы веб-разработки (если проект не веб)
+**/wwwroot/
+**/
