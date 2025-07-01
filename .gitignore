@@ -1,4 +1,4 @@
-## Игнорируем пользовательские настройки IDE
+## Файлы Visual Studio
 .vs/
 *.user
 *.suo
@@ -7,10 +7,9 @@
 *.vspscc
 *.sln.iml
 
-## Игнорируем билд-артефакты
-bin/
-obj/
-[Bb]uild/
+## Бинарные файлы и выходные сборки
+[Bb]in/
+[Oo]bj/
 [Dd]ebug/
 [Rr]elease/
 *.pdb
@@ -20,48 +19,28 @@ obj/
 *.lib
 *.dll
 *.exe
-*.app
-*.out
 
-## Игнорируем зависимости (NuGet)
-packages/
+## NuGet
 [Nn]u[Gg]et/
 *.nupkg
-*.nuget.props
-*.nuget.targets
+packages/
 
-## Игнорируем кэш Rider/ReSharper
+## Кэш Rider/ReSharper (если используется)
 _ReSharper.*
 *.resharper
-*.sln.dotnet
 .idea/
 
-## Игнорируем временные файлы
+## Временные файлы
 *.tmp
 *.temp
 *.log
 *.tlog
 *.lastbuildstate
 
-## Игнорируем тестовые результаты
+## Тестовые результаты
 [Tt]est[Rr]esult*/
 [Bb]uild[Ll]og.*
 *.trx
 
-## Игнорируем специфичные для .NET файлы
-.project.lock.json
-*.DotSettings
-appsettings.Development.json
-launchSettings.json
-
-## Игнорируем локальные настройки Azure Functions
-local.settings.json
-
-## Игнорируем файлы Docker (если не используются)
-.dockerignore
-**/.docker/**
-**/Dockerfile*
-
-## Игнорируем файлы веб-разработки (если проект не веб)
-**/wwwroot/
-**/
+## Исключения (специально для вашего случая)
+!Patterns.txt  # Явно разрешаем файл Patterns.txt
