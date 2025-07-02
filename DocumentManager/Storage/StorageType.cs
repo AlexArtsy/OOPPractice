@@ -1,12 +1,6 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-
-namespace DocumentManager
+﻿namespace DocumentManager.Storage
 {
-    internal enum StorageType
+    public enum StorageType
     {
         Sql = 1,
         S3 = 2

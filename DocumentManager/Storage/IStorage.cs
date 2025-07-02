@@ -1,12 +1,13 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
+﻿using DocumentManager.Document;
 
-namespace DocumentManager
+namespace DocumentManager.Storage
 {
-    internal interface IStorage
+    public interface IStorage
     {
+        public StorageType Type { get; set; }
+        public List<IDocument> Documents { get; set; }
+        public IDocument GetDocument(string docName, ContentFormat format);
+        public void AddDocument(IDocument document);
+        public void RemoveDocument(IDocument document);
     }
 }

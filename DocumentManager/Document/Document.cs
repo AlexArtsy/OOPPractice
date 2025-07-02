@@ -1,12 +1,6 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-
-namespace DocumentManager
+﻿namespace DocumentManager.Document
 {
-    internal class Document : IDocument
+    public class Document : IDocument
     {
         public Guid Id { get; set; }
         public string Name { get; set; }
@@ -15,9 +9,9 @@ namespace DocumentManager
 
         public Document(string name, ContentFormat format)
         {
-            this.Id = new Guid();
-            this.Name = name;
-            this.Format = format;
+            Id = new Guid();
+            Name = name;
+            Format = format;
         }
     }
 }
