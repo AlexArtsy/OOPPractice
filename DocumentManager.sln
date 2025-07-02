@@ -5,18 +5,10 @@ VisualStudioVersion = 17.8.34330.188
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "DocumentManager", "DocumentManager\DocumentManager.csproj", "{84414E14-AF07-4A02-B51E-5D43372DCF89}"
 EndProject
-Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Editors", "Editors", "{EA34E9EC-1CF0-4507-8498-12AD39259A70}"
-EndProject
-Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "DocumentEditor", "DocumentEditor\DocumentEditor.csproj", "{1EFB1676-F004-443A-8C6E-98ADAE51F1E3}"
-EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Solution Items", "Solution Items", "{AA8A85ED-D021-4E6B-8BCB-3918FFA02B1D}"
 	ProjectSection(SolutionItems) = preProject
 		Patterns.txt = Patterns.txt
 	EndProjectSection
-EndProject
-Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Fm1Editor", "Fm1Editor\Fm1Editor.csproj", "{E76E74EA-A0AC-4ECF-842D-55C91601A773}"
-EndProject
-Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "TxtEditor", "TxtEditor\TxtEditor.csproj", "{9DE9D9A2-16DE-423A-B6C0-B8A70EF9E7CA}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -28,26 +20,9 @@ Global
 		{84414E14-AF07-4A02-B51E-5D43372DCF89}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{84414E14-AF07-4A02-B51E-5D43372DCF89}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{84414E14-AF07-4A02-B51E-5D43372DCF89}.Release|Any CPU.Build.0 = Release|Any CPU
-		{1EFB1676-F004-443A-8C6E-98ADAE51F1E3}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{1EFB1676-F004-443A-8C6E-98ADAE51F1E3}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{1EFB1676-F004-443A-8C6E-98ADAE51F1E3}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{1EFB1676-F004-443A-8C6E-98ADAE51F1E3}.Release|Any CPU.Build.0 = Release|Any CPU
-		{E76E74EA-A0AC-4ECF-842D-55C91601A773}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{E76E74EA-A0AC-4ECF-842D-55C91601A773}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{E76E74EA-A0AC-4ECF-842D-55C91601A773}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{E76E74EA-A0AC-4ECF-842D-55C91601A773}.Release|Any CPU.Build.0 = Release|Any CPU
-		{9DE9D9A2-16DE-423A-B6C0-B8A70EF9E7CA}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{9DE9D9A2-16DE-423A-B6C0-B8A70EF9E7CA}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{9DE9D9A2-16DE-423A-B6C0-B8A70EF9E7CA}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{9DE9D9A2-16DE-423A-B6C0-B8A70EF9E7CA}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
-	EndGlobalSection
-	GlobalSection(NestedProjects) = preSolution
-		{1EFB1676-F004-443A-8C6E-98ADAE51F1E3} = {EA34E9EC-1CF0-4507-8498-12AD39259A70}
-		{E76E74EA-A0AC-4ECF-842D-55C91601A773} = {EA34E9EC-1CF0-4507-8498-12AD39259A70}
-		{9DE9D9A2-16DE-423A-B6C0-B8A70EF9E7CA} = {EA34E9EC-1CF0-4507-8498-12AD39259A70}
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
 		SolutionGuid = {72C5F46B-AB16-447C-B7A9-CDC72AD239BC}
