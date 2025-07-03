@@ -1,8 +1,9 @@
-﻿using DocumentManager.Document;
+﻿using Core.Enums;
+using Core.Interfaces;
 
-namespace DocumentManager.Editors
+namespace EditorsProvider
 {
-    public interface IEditor
+    public abstract class Editor : IEditor
     {
         public ContentFormat EditorType { get; set; }
         public abstract void OpenDocument(IDocument document);

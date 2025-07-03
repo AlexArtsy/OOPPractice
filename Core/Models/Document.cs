@@ -1,4 +1,7 @@
-﻿namespace DocumentManager.Document
+﻿using Core.Enums;
+using Core.Interfaces;
+
+namespace Core.Models
 {
     public class Document : IDocument
     {

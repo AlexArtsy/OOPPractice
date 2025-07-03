@@ -1,6 +1,6 @@
-﻿using DocumentManager.Document;
+﻿using Core.Enums;
 
-namespace DocumentManager.Storage
+namespace Core.Interfaces
 {
     public interface IStorage
     {

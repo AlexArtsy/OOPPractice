@@ -1,6 +1,9 @@
-﻿namespace DocumentManager.Storage
+﻿using Core.Enums;
+using Core.Interfaces;
+
+namespace StorageProvider
 {
-    internal static class StorageProvider
+    public static class StorageProvider
     {
         public static IStorage GetStorage(StorageType type)
         {

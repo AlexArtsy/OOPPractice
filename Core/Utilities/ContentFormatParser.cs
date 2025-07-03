@@ -1,13 +1,7 @@
-﻿namespace DocumentManager.Document
-{
-    public enum ContentFormat
-    {
-        Txt,
-        Doc,
-        Rtf,
-        Fm1
-    }
+﻿using Core.Enums;
 
+namespace Core.Utilities
+{
     public static class ContentFormatParser
     {
         public static ContentFormat Parse(string format)
@@ -20,7 +14,7 @@
                 "doc" => ContentFormat.Doc,
                 "rtf" => ContentFormat.Rtf,
                 "fm1" => ContentFormat.Fm1,
-                _ => throw new ArgumentException($"Unknown format: '{format}'. Supported formats: {string.Join(", ", Enum.GetNames(typeof(ContentFormat)))}")
+                _ => throw new ArgumentException($"Неизвестный формат: '{format}'. Поддерживаемые форматы: {string.Join(", ", Enum.GetNames(typeof(ContentFormat)))}")
             };
         }
     }

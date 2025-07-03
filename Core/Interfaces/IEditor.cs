@@ -1,13 +1,8 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-using DocumentManager.Document;
+﻿using Core.Enums;
 
-namespace DocumentManager.Editors
+namespace Core.Interfaces
 {
-    public abstract class Editor : IEditor
+    public interface IEditor
     {
         public ContentFormat EditorType { get; set; }
         public abstract void OpenDocument(IDocument document);
