@@ -10,7 +10,7 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Solution Items", "Solution 
 		Patterns.txt = Patterns.txt
 	EndProjectSection
 EndProject
-Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "EditorsProvider", "EditorsProvider\EditorsProvider.csproj", "{3BA3A1EF-599E-40CE-89E6-106C755E8892}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "EditorProvider", "EditorsProvider\EditorProvider.csproj", "{3BA3A1EF-599E-40CE-89E6-106C755E8892}"
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "StorageProvider", "StorageProvider\StorageProvider.csproj", "{D5A962DA-8826-4230-AA50-DA5A59CCA89E}"
 EndProject

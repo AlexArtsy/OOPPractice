@@ -1,11 +1,11 @@
 ﻿using Core.Enums;
 using Core.Interfaces;
 
-namespace EditorsProvider
+namespace EditorProvider
 {
-    public static class EditorProvider
+    public class EditorProvider : IEditorProvider
     {
-        public static IEditor GetEditor(IDocument document)
+        public IEditor GetEditor(IDocument document)
         {
             switch (document.Format)
             {
