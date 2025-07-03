@@ -18,7 +18,9 @@ namespace DocumentManager
             //services.AddSingleton<IStorageProvider, StorageProvider.StorageProvider>();
 
             services.AddSingleton<IStorageProvider, StorageProvider.CachedStorageProvider>();
-            services.AddScoped<IEditorProvider, EditorProvider.EditorProvider>();
+
+            // Тут есть вопрос по использованию паттерна Фабричный метод
+            //services.AddScoped<IEditorProvider, EditorProvider.EditorProvider>();
 
             services.AddTransient<App>();
 

@@ -8,6 +8,6 @@ namespace Core.Interfaces
 {
     public interface IEditorProvider
     {
-        public IEditor GetEditor(IDocument document);
+        public IEditor GetEditor();
     }
 }

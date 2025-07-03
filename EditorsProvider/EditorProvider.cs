@@ -1,21 +1,25 @@
-﻿using Core.Enums;
-using Core.Interfaces;
+﻿using Core.Interfaces;
 
 namespace EditorProvider
 {
-    public class EditorProvider : IEditorProvider
+    public abstract class EditorProvider : IEditorProvider
     {
-        public IEditor GetEditor(IDocument document)
+        public abstract IEditor GetEditor();
+
+        public void OpenDocument(IDocument document)
         {
-            switch (document.Format)
-            {
-                case ContentFormat.Doc:
-                    return new DocEditor();
-                case ContentFormat.Txt:
-                    return new TxtEditor();
-                default:
-                    throw new Exception(string.Format("Неизвестный формат файла: {0}", document.Format));
-            }
+            IEditor editor = this.GetEditor();
+            editor.OpenDocument(document);
+        }
+        public void SaveDocument(IDocument document)
+        {
+            IEditor editor = this.GetEditor();
+            editor.SaveDocument(document);
+        }
+        public void CloseDocument(IDocument document)
+        {
+            IEditor editor = this.GetEditor();
+            editor.CloseDocument(document);
         }
     }
 }
