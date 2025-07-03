@@ -10,7 +10,7 @@ namespace StorageProvider
             //  Тут какая-то особая логика работы с S3-хранилищем
             try
             {
-                return Documents.Single(d => d.Name.Equals(docName) && d.Format.Equals(format));
+                return documents.Single(d => d.Name.Equals(docName) && d.Format.Equals(format));
             }
             catch (InvalidOperationException e)
             {
@@ -21,14 +21,14 @@ namespace StorageProvider
         public override void AddDocument(IDocument document)
         {
             //  Тут какая-то особая логика работы с S3-хранилищем
-            Documents.Add(document);
+            documents.Add(document);
             Console.WriteLine(string.Format("Документ {0} добавлен в хранилище {1}", document.Name, Type));
         }
 
         public override void RemoveDocument(IDocument document)
         {
             //  Тут какая-то особая логика работы с S3-хранилищем
-            Documents.Remove(document);
+            documents.Remove(document);
             Console.WriteLine(string.Format("Документ {0} удален из хранилища {1}", document.Name, Type));
         }
 

@@ -1,7 +1,7 @@
 ﻿using Core.Enums;
 using Core.Interfaces;
 
-namespace EditorsProvider
+namespace EditorProvider
 {
     public class DocEditor : Editor
     {

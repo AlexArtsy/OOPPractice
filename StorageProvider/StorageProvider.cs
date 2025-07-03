@@ -3,9 +3,9 @@ using Core.Interfaces;
 
 namespace StorageProvider
 {
-    public static class StorageProvider
+    public class StorageProvider : IStorageProvider
     {
-        public static IStorage GetStorage(StorageType type)
+        public IStorage GetStorage(StorageType type)
         {
             switch (type)
             {

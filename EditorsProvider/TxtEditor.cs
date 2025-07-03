@@ -1,7 +1,7 @@
 ﻿using Core.Enums;
 using Core.Interfaces;
 
-namespace EditorsProvider
+namespace EditorProvider
 {
     internal class TxtEditor : Editor
     {
