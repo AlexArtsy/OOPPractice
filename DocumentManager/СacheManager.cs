@@ -1,5 +1,5 @@
-﻿using DocumentManager.Document;
-using DocumentManager.Storage;
+﻿using Core.Enums;
+using Core.Interfaces;
 
 namespace DocumentManager
 {

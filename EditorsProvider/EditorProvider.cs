@@ -1,6 +1,7 @@
-﻿using DocumentManager.Document;
+﻿using Core.Enums;
+using Core.Interfaces;
 
-namespace DocumentManager.Editors
+namespace EditorsProvider
 {
     public static class EditorProvider
     {

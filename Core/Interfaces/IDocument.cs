@@ -3,9 +3,9 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
-using DocumentManager.Document;
+using Core.Enums;
 
-namespace DocumentManager.Document
+namespace Core.Interfaces
 {
     public interface IDocument
     {

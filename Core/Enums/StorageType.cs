@@ -1,4 +1,4 @@
-﻿namespace DocumentManager.Storage
+﻿namespace Core.Enums
 {
     public enum StorageType
     {

@@ -1,9 +1,7 @@
-﻿using System.ComponentModel.DataAnnotations;
-using System.IO;
-using System.Reflection.Metadata;
-using DocumentManager.Document;
-using DocumentManager.Editors;
-using DocumentManager.Storage;
+﻿using Core.Enums;
+using Core.Interfaces;
+using Core.Utilities;
+using EditorsProvider;
 
 namespace DocumentManager
 {
@@ -13,6 +11,7 @@ namespace DocumentManager
 
         static void Main(string[] args)
         {
+
             RunApp();
         }
 
@@ -20,7 +19,6 @@ namespace DocumentManager
         {
             while(true)
             {
-                //TODO попробовать сделать дженерик шаблонизатор провайдеров: эдитора, хранилища
                 try
                 {
                     Console.WriteLine("Выберите хранилище:");
@@ -34,9 +32,12 @@ namespace DocumentManager
 
                     var doc = LoadDocument(docName, docFormat, storage);
 
+                    //  HACK: например, пусть будет такой путь.
                     var path = "D://Documents";
+
                     SaveDocument(doc, path);
-                    OpenDocument(doc, path);
+                    OpenDocument(EditorProvider.GetEditor(doc), doc, path);
+
 
                     Console.WriteLine();
                 }
@@ -64,9 +65,9 @@ namespace DocumentManager
             switch (Console.ReadLine())
             {
                 case "1":
-                    return StorageProvider.GetStorage(StorageType.Sql);
+                    return StorageProvider.StorageProvider.GetStorage(StorageType.Sql);
                 case "2":
-                    return StorageProvider.GetStorage(StorageType.S3);
+                    return StorageProvider.StorageProvider.GetStorage(StorageType.S3);
                 default:
                     Console.WriteLine("Ошибка! Нужно ввести число, соответствующее типу хранилища!");
                     return SelectStorage();
@@ -93,11 +94,9 @@ namespace DocumentManager
             Console.WriteLine(String.Format("Документ {0} сохранен в директории: {1}", document.Name, path));
         }
 
-        private static void OpenDocument(IDocument document, string path)
+        private static void OpenDocument(IEditor editor, IDocument document, string path)
         {
-            IEditor editor = EditorProvider.GetEditor(document);
             editor.OpenDocument(document);
-
             CheckEditorState(editor);
         }
 
