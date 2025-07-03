@@ -1,12 +1,12 @@
 ﻿using Core.Enums;
 using Core.Interfaces;
 using Core.Utilities;
+using EditorProvider;
 
 namespace DocumentManager
 {
     public class App
     {
-        public IEditorProvider EditorProvider { get; set; }
         public IStorageProvider StorageProvider { get; set; }
 
         public void Run()
@@ -30,7 +30,10 @@ namespace DocumentManager
                     var path = "D://Documents";
 
                     SaveDocument(doc, path);
-                    OpenDocument(EditorProvider.GetEditor(doc), doc, path);
+
+                    var editor = SelectEditor(doc);
+
+                    OpenDocument(editor, doc, path);
 
 
                     Console.WriteLine();
@@ -47,6 +50,23 @@ namespace DocumentManager
                     Console.WriteLine("Повторите ввод.\n");
                     continue;
                 }
+            }
+        }
+
+        private IEditor SelectEditor(IDocument doc)
+        {
+            IEditorProvider editorProvider;
+
+            switch (doc.Format)
+            {
+                case ContentFormat.Doc:
+                    editorProvider = new DocEditorProvider();
+                    return editorProvider.GetEditor();
+                case ContentFormat.Txt:
+                    editorProvider = new TxtEditorProvider();
+                    return editorProvider.GetEditor();
+                default:
+                    throw new Exception(string.Format("Неизвестный формат файла: {0}", doc.Format));
             }
         }
 
@@ -95,10 +115,9 @@ namespace DocumentManager
             Console.WriteLine(String.Format("Работа приложения {0}-редактор завершена", editor.EditorType));
         }
 
-        public App(IStorageProvider storageProvider, IEditorProvider editorProvider)
+        public App(IStorageProvider storageProvider)
         {
             this.StorageProvider = storageProvider;
-            this.EditorProvider = editorProvider;
         }
     }
 }
